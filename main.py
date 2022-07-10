@@ -19,6 +19,13 @@ try:
         bot.report_results(nom_fichier)
 except Exception as E:
     if "in PATH" in str(E):
-        print('We can\'t get this program to run from the terminal.\nAdd the chrome driver to the PATH system variable.')
+        print(
+            'You are trying to run the bot from command line \n'
+            'Please add to PATH your Selenium Drivers \n'
+            'Windows: \n'
+            '    set PATH=%PATH%;C:path-to-your-folder \n \n'
+            'Linux: \n'
+            '    PATH=$PATH:/path/toyour/folder/ \n'
+        )
     else:
         raise
